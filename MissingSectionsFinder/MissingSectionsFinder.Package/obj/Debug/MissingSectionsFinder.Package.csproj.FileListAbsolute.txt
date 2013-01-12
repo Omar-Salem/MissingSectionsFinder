@@ -1,0 +1,42 @@
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.dll
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.pdb
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.pkgdef
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.vsix
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\extension.vsixmanifest
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.csproj.ResolveComReference.cache
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MyControl.baml
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MyControl.g.cs
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package_MarkupCompile.cache
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.g.resources
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\VSPackage.resources
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\OmarSalem.MissingSectionsFinder_Package.Resources.resources
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.csproj.GenerateResource.Cache
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.cto
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.dll
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.pdb
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.pkgdef
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.latest.pkgdef
+D:\My Projects\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\extension.vsixmanifest
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\ResolveAssemblyReference.cache
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.csproj.ResolveComReference.cache
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\VSPackage.resources
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\OmarSalem.MissingSectionsFinder_Package.Resources.resources
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\GenerateResource.read.1.tlog
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\GenerateResource.write.1.tlog
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.cto
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.dll
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.pdb
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.pkgdef
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Package.vsix
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\extension.vsixmanifest
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Control.dll
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Control.pdb
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.dll
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.pdb
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.pkgdef
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.latest.pkgdef
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\extension.vsixmanifest
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Services.Contracts.dll
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Entities.dll
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Services.Contracts.pdb
+D:\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Entities.pdb

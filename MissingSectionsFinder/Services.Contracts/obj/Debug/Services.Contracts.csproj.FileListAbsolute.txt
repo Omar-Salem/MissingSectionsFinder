@@ -1,0 +1,7 @@
+D:\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.dll
+D:\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.pdb
+D:\MissingSectionsFinder\Services.Contracts\bin\Debug\Entities.dll
+D:\MissingSectionsFinder\Services.Contracts\bin\Debug\Entities.pdb
+D:\MissingSectionsFinder\Services.Contracts\obj\Debug\ResolveAssemblyReference.cache
+D:\MissingSectionsFinder\Services.Contracts\obj\Debug\Services.Contracts.dll
+D:\MissingSectionsFinder\Services.Contracts\obj\Debug\Services.Contracts.pdb

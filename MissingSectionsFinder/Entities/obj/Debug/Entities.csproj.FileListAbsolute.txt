@@ -1,0 +1,5 @@
+D:\MissingSectionsFinder\Entities\bin\Debug\Entities.dll
+D:\MissingSectionsFinder\Entities\bin\Debug\Entities.pdb
+D:\MissingSectionsFinder\Entities\obj\Debug\ResolveAssemblyReference.cache
+D:\MissingSectionsFinder\Entities\obj\Debug\Entities.dll
+D:\MissingSectionsFinder\Entities\obj\Debug\Entities.pdb
