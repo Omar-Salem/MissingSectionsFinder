@@ -7,3 +7,14 @@ D:\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Contracts.pd
 D:\MissingSectionsFinder\Services.Implementation\obj\Debug\ResolveAssemblyReference.cache
 D:\MissingSectionsFinder\Services.Implementation\obj\Debug\Services.Implementation.dll
 D:\MissingSectionsFinder\Services.Implementation\obj\Debug\Services.Implementation.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Implementation.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Implementation.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Entities.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Contracts.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Microsoft.VisualStudio.Settings.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Entities.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Contracts.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Microsoft.VisualStudio.Settings.xml
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\obj\Debug\Services.Implementation.csprojResolveAssemblyReference.cache
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\obj\Debug\Services.Implementation.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\obj\Debug\Services.Implementation.pdb

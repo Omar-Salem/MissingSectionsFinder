@@ -5,3 +5,10 @@ D:\MissingSectionsFinder\Services.Contracts\bin\Debug\Entities.pdb
 D:\MissingSectionsFinder\Services.Contracts\obj\Debug\ResolveAssemblyReference.cache
 D:\MissingSectionsFinder\Services.Contracts\obj\Debug\Services.Contracts.dll
 D:\MissingSectionsFinder\Services.Contracts\obj\Debug\Services.Contracts.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Entities.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Entities.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\obj\Debug\Services.Contracts.csprojResolveAssemblyReference.cache
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\obj\Debug\Services.Contracts.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\obj\Debug\Services.Contracts.pdb

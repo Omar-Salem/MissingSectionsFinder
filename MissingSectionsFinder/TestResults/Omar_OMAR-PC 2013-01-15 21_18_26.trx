@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6226c0b3-3b8e-4f6d-8309-faa64275e699" name="Omar@OMAR-PC 2013-01-15 21:18:26" runUser="Omar-PC\Omar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="IntegrationTests" id="85f80678-5acf-4267-a4f8-e5bf47bd5e87">
+    <Description>This test run configuration uses the VS IDE host type in the test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Omar_OMAR-PC 2013-01-15 21_18_26">
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Implementation.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\bin\Debug\Entities.dll" />
+    </Deployment>
+    <Execution>
+      <Hosts>
+        <VSSDKTestHostRunConfig name="VS IDE" HiveKind="DevEnv" HiveName="10.0Exp" xmlns="http://microsoft.com/schemas/VisualStudio/SDK/Tools/IdeHostAdapter/2006/06" />
+      </Hosts>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-15T21:18:26.5737706+02:00" queuing="2013-01-15T21:18:26.6687760+02:00" start="2013-01-15T21:18:26.7007778+02:00" finish="2013-01-15T21:18:27.2538095+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetLayoutPageName_MVCLayout" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="a0616a27-9b42-d56c-e59d-4d22510a02e0">
+      <Execution id="b93ad9e8-963a-45a6-983a-180b7d0e643e" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLayoutPageName_MVCLayout" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="a0616a27-9b42-d56c-e59d-4d22510a02e0" executionId="b93ad9e8-963a-45a6-983a-180b7d0e643e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b93ad9e8-963a-45a6-983a-180b7d0e643e" testId="a0616a27-9b42-d56c-e59d-4d22510a02e0" testName="GetLayoutPageName_MVCLayout" computerName="OMAR-PC" duration="00:00:00.0459992" startTime="2013-01-15T21:18:26.8027837+02:00" endTime="2013-01-15T21:18:27.2088069+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b93ad9e8-963a-45a6-983a-180b7d0e643e">
+    </UnitTestResult>
+  </Results>
+</TestRun>

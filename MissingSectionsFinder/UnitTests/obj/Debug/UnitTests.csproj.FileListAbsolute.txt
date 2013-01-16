@@ -1,0 +1,15 @@
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\UnitTests.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\UnitTests.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Entities.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Services.Contracts.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Services.Implementation.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Microsoft.VisualStudio.Settings.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Entities.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Services.Contracts.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Services.Implementation.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\bin\Debug\Microsoft.VisualStudio.Settings.xml
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\obj\Debug\UnitTests.Resources.resources
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\obj\Debug\UnitTests.csproj.GenerateResource.Cache
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\obj\Debug\UnitTests.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\obj\Debug\UnitTests.pdb
