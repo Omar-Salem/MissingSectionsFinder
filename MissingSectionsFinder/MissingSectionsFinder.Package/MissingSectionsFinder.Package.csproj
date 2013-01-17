@@ -157,9 +157,21 @@
     <Content Include="Resources\Package.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{CEB3D423-AB5A-47C9-B75C-6F48E20C187F}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MissingSectionsFinder.Control\MissingSectionsFinder.Control.csproj">
       <Project>{71A9AB34-D7CD-4240-9D96-42BCF065030F}</Project>
       <Name>MissingSectionsFinder.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.Contracts\Services.Contracts.csproj">
+      <Project>{4490B4CB-5D1E-42CF-BAEE-995B31174690}</Project>
+      <Name>Services.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.Implementation\Services.Implementation.csproj">
+      <Project>{D8B5606A-876A-4DC4-BCD0-F853CCF60827}</Project>
+      <Name>Services.Implementation</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

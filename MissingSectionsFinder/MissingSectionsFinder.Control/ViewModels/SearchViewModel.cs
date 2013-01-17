@@ -18,12 +18,12 @@
         private readonly IRegexService _regexService;
         private readonly IPagesService _pagesService;
         private ObservableCollection<Result> _results;
+        private Result _selectedPage;
 
         #endregion Member Variables
 
         #region Constructor
 
-        [ImportingConstructor]
         public SearchViewModel(IVisualStudioService visualStudioService, IRegexService regexService, IPagesService pagesService)
         {
             this._visualStudioService = visualStudioService;
@@ -49,20 +49,27 @@
             }
         }
 
+        public Result SelectedPage
+        {
+            get { return _selectedPage; }
+            set { if (_selectedPage != value) { _selectedPage = value; } OnPropertyChanged("SelectedPage"); }
+        }
+
+
         #endregion Public Properties
 
         #region Commands
 
-        public ICommand FindDuplicates
+        public ICommand FindMissingSections
         {
-            get { return new RelayCommand(FindDuplicatesExecute, CanFindDuplicatesExecute); }
+            get { return new RelayCommand(FindMissingSectionsExecute, () => true); }
         }
 
         #endregion Commands
 
         #region Commands Methods
 
-        private void FindDuplicatesExecute()
+        private void FindMissingSectionsExecute()
         {
             var webProject = _visualStudioService.GetWebProject();
 
@@ -73,11 +80,6 @@
 
             var pages = _visualStudioService.GetPages(webProject.Project.ProjectItems);
             Results = new ObservableCollection<Result>(_pagesService.GetMissingSections(pages));
-        }
-
-        private bool CanFindDuplicatesExecute()
-        {
-            return true;
         }
 
         #endregion Commands Methods

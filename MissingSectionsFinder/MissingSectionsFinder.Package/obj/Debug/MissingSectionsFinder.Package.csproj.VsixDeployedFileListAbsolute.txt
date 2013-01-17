@@ -7,3 +7,7 @@ C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem
 C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem\MissingSectionsFinder.Package\1.0\\Entities.dll
 C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem\MissingSectionsFinder.Package\1.0\\Services.Contracts.dll
 C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem\MissingSectionsFinder.Package\1.0\\Services.Implementation.dll
+C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem\MissingSectionsFinder.Package\1.0\\Microsoft.VisualStudio.Settings.dll
+C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem\MissingSectionsFinder.Package\1.0\\Entities.pdb
+C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem\MissingSectionsFinder.Package\1.0\\Services.Contracts.pdb
+C:\Users\Omar\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Omar Salem\MissingSectionsFinder.Package\1.0\\Services.Implementation.pdb

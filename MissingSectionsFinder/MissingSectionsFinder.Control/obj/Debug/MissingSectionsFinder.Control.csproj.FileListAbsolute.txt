@@ -25,8 +25,8 @@ D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\bin\Debug\Services.Contracts.pdb
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\bin\Debug\Services.Implementation.pdb
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\MissingSectionsFinder.Control.csprojResolveAssemblyReference.cache
-D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\SearchControl.baml
-D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\SearchControl.g.cs
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\Views\SearchControl.baml
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\Views\SearchControl.g.cs
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\MissingSectionsFinder.Control_MarkupCompile.cache
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\MissingSectionsFinder.Control.g.resources
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Control\obj\Debug\MissingSectionsFinder.Control.Properties.Resources.resources

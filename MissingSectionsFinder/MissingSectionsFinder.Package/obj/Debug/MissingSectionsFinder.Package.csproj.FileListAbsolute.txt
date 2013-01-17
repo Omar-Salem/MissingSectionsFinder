@@ -48,9 +48,11 @@ D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Control.dll
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Services.Contracts.dll
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Entities.dll
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Services.Implementation.dll
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\MissingSectionsFinder.Control.pdb
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Services.Contracts.pdb
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Entities.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\bin\Debug\Services.Implementation.pdb
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.csprojResolveAssemblyReference.cache
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.csproj.ResolveComReference.cache
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\VSPackage.resources
@@ -64,3 +66,5 @@ D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.pkgdef
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.latest.pkgdef
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\extension.vsixmanifest
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\VSCT.read.1.tlog
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\VSCT.write.1.tlog

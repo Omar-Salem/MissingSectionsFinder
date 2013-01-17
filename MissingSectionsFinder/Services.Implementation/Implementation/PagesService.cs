@@ -8,7 +8,7 @@ using Entities;
 
 namespace Services.Implementation.Implementation
 {
-    [Export(typeof(IRegexService))]
+    [Export(typeof(IPagesService))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class PagesService : IPagesService
     {
@@ -21,7 +21,7 @@ namespace Services.Implementation.Implementation
         #region Constructor
         
         [ImportingConstructor]
-        public PagesService(IRegexService regexService)
+        public PagesService([Import("regexService", typeof(IRegexService))]IRegexService regexService)
         {
             _regexService = regexService;
         } 

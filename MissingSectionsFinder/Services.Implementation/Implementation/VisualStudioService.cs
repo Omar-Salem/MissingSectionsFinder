@@ -75,10 +75,10 @@
             {
                 return ProjectType.MVC2;
             }
-            else if (projectTypeGuid.Contains("349c5851-65df-11da-9384-00065b846f21"))
-            {
-                return ProjectType.WebForm;
-            }
+            //else if (projectTypeGuid.Contains("349c5851-65df-11da-9384-00065b846f21"))
+            //{
+            //    return ProjectType.WebForm;
+            //}
             else
             {
                 return ProjectType.Other;
