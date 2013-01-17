@@ -8,6 +8,7 @@
     using Services.Implementation;
     using EnvDTE;
     using System.Collections.Generic;
+    using System.ComponentModel.Composition;
 
     public class SearchViewModel : ViewModelBase
     {
@@ -22,6 +23,7 @@
 
         #region Constructor
 
+        [ImportingConstructor]
         public SearchViewModel(IVisualStudioService visualStudioService, IRegexService regexService, IPagesService pagesService)
         {
             this._visualStudioService = visualStudioService;
@@ -70,6 +72,7 @@
             }
 
             var pages = _visualStudioService.GetPages(webProject.Project.ProjectItems);
+            Results = new ObservableCollection<Result>(_pagesService.GetMissingSections(pages));
         }
 
         private bool CanFindDuplicatesExecute()
