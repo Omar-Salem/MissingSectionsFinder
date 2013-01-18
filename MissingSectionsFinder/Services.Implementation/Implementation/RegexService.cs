@@ -83,7 +83,7 @@ namespace Services.Implementation
                 idx = match.IndexOf(')');
             }
 
-            return match.Substring(0, idx);
+            return match.Substring(0, idx).Replace("\"", string.Empty);
         }
 
         #endregion

@@ -30,91 +30,74 @@ namespace Services.Implementation.Implementation
 
         #region Public Methods
 
-        IEnumerable<Result> IPagesService.GetMissingSections(IEnumerable<Area> areas, IEnumerable<Page> pages)
+        IEnumerable<Result> IPagesService.GetMissingSections(IEnumerable<Page> pages)
         {
-            IEnumerable<Result> results = GetMissingSectionsInPages(pages);
+            var layoutSections = new Dictionary<string, IEnumerable<string>>();
 
-            foreach (Area area in areas)
+            foreach (var currentPage in pages)
             {
-                IEnumerable<Result> missingSections = GetMissingSectionsInPages(area.Pages);
-                results = results.Concat(missingSections);
-            }
+                Page layoutPage = GetLayoutPage(pages, currentPage);
 
-            return results;
+                if (layoutPage != null)
+                {
+                    if (!layoutSections.ContainsKey(layoutPage.Name))
+                    {
+                        layoutSections[layoutPage.Name] = _regexService.GetSectionsInLayout(layoutPage.Content);
+                    }
+
+                    IEnumerable<string> pageSections = _regexService.GetSectionsInPage(currentPage.Content);
+                    IEnumerable<string> missingSections = layoutSections[layoutPage.Name].Except(pageSections);
+
+                    if (missingSections.Any())
+                    {
+                        yield return new Result { PageName = currentPage.Name, Sections = missingSections };
+                    }
+                }
+
+            }
         }
 
         #endregion
 
         #region Private Methods
 
-        IEnumerable<Result> GetMissingSectionsInPages(IEnumerable<Page> pages)
+        private Page GetLayoutPage(IEnumerable<Page> pages, Page currentPage)
         {
-            Page defaultLayoutPage = GetDefaultLayoutPage(pages);
+            string layoutPageName = _regexService.GetLayoutPageName(currentPage.Content);
 
-            Dictionary<string, IEnumerable<string>> pagesWithSections = GetLayoutSections(pages);
-
-            foreach (var page in pages)
+            if (layoutPageName == "null")
             {
-                IEnumerable<string> missingSections = FindMissingSections(defaultLayoutPage, pagesWithSections, page);
-
-                yield return new Result { PageName = page.Name, Sections = missingSections };
-            }
-        }
-
-        private Page GetDefaultLayoutPage(IEnumerable<Page> pages)
-        {
-            Page viewStart = pages.Where(p => p.Name.Contains("_ViewStart")).SingleOrDefault();
-
-            if (viewStart == null)
-            {
-                return new Page { Name = "", Content = "" };
+                return null;
             }
 
-            string defaultLayoutPageName = _regexService.GetLayoutPageName(viewStart.Content);
-
-            Page defaultLayoutPage = pages.Where(p => p.Name == defaultLayoutPageName).SingleOrDefault();
-
-            if (defaultLayoutPage == null)
+            if (string.IsNullOrEmpty(layoutPageName))
             {
-                return new Page { Name = "", Content = "" };
-            }
+                Page viewStart = pages.Where(p => p.Area == currentPage.Area && p.Name.Contains("_ViewStart")).SingleOrDefault();
 
-            return defaultLayoutPage;
-        }
-
-        private Dictionary<string, IEnumerable<string>> GetLayoutSections(IEnumerable<Page> pages)
-        {
-            var pagesWithSections = new Dictionary<string, IEnumerable<string>>();
-
-            foreach (var page in pages)
-            {
-                IEnumerable<string> pageSections = _regexService.GetSectionsInLayout(page.Content);
-
-                if (pageSections.Any())
+                if (viewStart == null)
                 {
-                    pagesWithSections[page.Name] = pageSections;
+                    viewStart = pages.Where(p => string.IsNullOrEmpty(p.Area) && p.Name.Contains("_ViewStart")).SingleOrDefault();
+                }
+
+                if (viewStart != null)
+                {
+                    layoutPageName = _regexService.GetLayoutPageName(viewStart.Content);
+                }
+
+                if (string.IsNullOrEmpty(layoutPageName))
+                {
+                    return null;
                 }
             }
 
-            return pagesWithSections;
-        }
+            Page layout = pages.Where(p => p.Area == currentPage.Area && p.Name.Contains(layoutPageName)).SingleOrDefault();
 
-        private IEnumerable<string> FindMissingSections(Page defaultLayoutPage, Dictionary<string, IEnumerable<string>> pagesWithSections, Page page)
-        {
-            string pageLayout = _regexService.GetLayoutPageName(page.Content);
-            IEnumerable<string> pageSections = _regexService.GetSectionsInPage(page.Content);
-            IEnumerable<string> missingSections = new string[] { };
-
-            if (string.IsNullOrEmpty(pageLayout) && pagesWithSections.ContainsKey(defaultLayoutPage.Name))
+            if (layout == null)
             {
-                missingSections = pagesWithSections[defaultLayoutPage.Name].Except(pageSections);
-            }
-            else if (pagesWithSections.ContainsKey(pageLayout))
-            {
-                missingSections = pagesWithSections[pageLayout].Except(pageSections);
+                layout = pages.Where(p => string.IsNullOrEmpty(p.Area) && p.Name.Contains(layoutPageName)).SingleOrDefault();
             }
 
-            return missingSections;
+            return layout;
         }
 
         #endregion

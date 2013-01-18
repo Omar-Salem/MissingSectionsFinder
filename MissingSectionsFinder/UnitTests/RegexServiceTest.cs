@@ -22,8 +22,8 @@ namespace UnitTests
 
             //Assert
             Assert.AreEqual(2, actual.Count());
-            Assert.AreEqual("\"Title\"", actual.ElementAt(0));
-            Assert.AreEqual("\"PageName\"", actual.ElementAt(1));
+            Assert.AreEqual("Title", actual.ElementAt(0));
+            Assert.AreEqual("PageName", actual.ElementAt(1));
         }
 
         [TestMethod()]

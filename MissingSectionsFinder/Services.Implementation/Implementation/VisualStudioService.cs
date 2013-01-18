@@ -49,22 +49,6 @@
             return null;
         }
 
-        IEnumerable<Area> IVisualStudioService.GetAreas(ProjectItems projectItems)
-        {
-            foreach (ProjectItem folder in projectItems)
-            {
-                if (folder.Name == "Areas")
-                {
-                    foreach (ProjectItem area in folder.ProjectItems)
-                    {
-                        yield return new Area { Name = area.Name, Pages = GetPages(area) };
-                    }
-
-                   yield break;
-                }
-            }
-        }
-
         IEnumerable<Page> IVisualStudioService.GetPages(ProjectItems projectItems)
         {
             List<Page> pages = new List<Page>();
@@ -73,8 +57,14 @@
             {
                 if (folder.Name == "Views")
                 {
-                    pages.AddRange(GetPages(folder));
-                    break;
+                    pages.AddRange(GetPages(folder, string.Empty));
+                }
+                else if (folder.Name == "Areas")
+                {
+                    foreach (ProjectItem area in folder.ProjectItems)
+                    {
+                        pages.AddRange(GetPages(area, area.Name));
+                    }
                 }
             }
 
@@ -154,7 +144,7 @@
             return service;
         }
 
-        private IList<Page> GetPages(ProjectItem item)
+        private IList<Page> GetPages(ProjectItem item, string area)
         {
             var files = new List<Page>();
 
@@ -162,24 +152,24 @@
             {
                 if (CheckIsPage(item))//check its not an empty folder
                 {
-                    GetPageData(item, files);
+                    GetPageData(item, files, area);
                 }
             }
             else
             {
                 foreach (ProjectItem currentItem in item.ProjectItems)
                 {
-                    files.AddRange(GetPages(currentItem));
+                    files.AddRange(GetPages(currentItem, area));
                 }
             }
 
             return files;
         }
 
-        private void GetPageData(ProjectItem item, List<Page> files)
+        private void GetPageData(ProjectItem item, List<Page> files, string area)
         {
             var fileContents = GetDocumentText(item);
-            files.Add(new Page { Name = FormatPath(item), Content = fileContents});
+            files.Add(new Page { Name = FormatPath(item), Content = fileContents, Area = area });
         }
 
         private bool CheckIsPage(ProjectItem item)

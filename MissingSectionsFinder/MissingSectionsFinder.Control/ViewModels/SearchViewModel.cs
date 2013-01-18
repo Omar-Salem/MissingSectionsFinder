@@ -79,8 +79,7 @@
             }
 
             IEnumerable<Page> pages = _visualStudioService.GetPages(webProject.Project.ProjectItems);
-            IEnumerable<Area> areas = _visualStudioService.GetAreas(webProject.Project.ProjectItems);
-            IEnumerable<Result> results = _pagesService.GetMissingSections(areas, pages);
+            IEnumerable<Result> results = _pagesService.GetMissingSections( pages);
 
             Results = new ObservableCollection<Result>(results);
         }

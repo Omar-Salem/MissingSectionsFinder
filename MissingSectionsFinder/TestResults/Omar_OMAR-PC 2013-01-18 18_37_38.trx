@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f9ef3f39-43b4-46ab-ba86-30e68f8aa119" name="Omar@OMAR-PC 2013-01-18 18:37:38" runUser="Omar-PC\Omar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="IntegrationTests" id="85f80678-5acf-4267-a4f8-e5bf47bd5e87">
+    <Description>This test run configuration uses the VS IDE host type in the test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Omar_OMAR-PC 2013-01-18 18_37_38">
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Implementation.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\bin\Debug\Entities.dll" />
+    </Deployment>
+    <Execution>
+      <Hosts>
+        <VSSDKTestHostRunConfig name="VS IDE" HiveKind="DevEnv" HiveName="10.0Exp" xmlns="http://microsoft.com/schemas/VisualStudio/SDK/Tools/IdeHostAdapter/2006/06" />
+      </Hosts>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-18T18:37:38.8350053+02:00" queuing="2013-01-18T18:37:38.9530120+02:00" start="2013-01-18T18:37:38.9680129+02:00" finish="2013-01-18T18:37:39.5200445+02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="3" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetSectionsInLayoutTest" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="cb3fd21d-5225-255d-e68c-aa7383253cbb">
+      <Execution id="dcf9e824-c030-4fb0-be40-6861d1aca8e7" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSectionsInLayoutTest" />
+    </UnitTest>
+    <UnitTest name="GetSectionsInPageTest" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="cd73caf9-f761-9833-4386-7cc9434f64d8">
+      <Execution id="dff1c315-f5c3-47cc-a24c-c38dc1c07c74" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSectionsInPageTest" />
+    </UnitTest>
+    <UnitTest name="GetLayoutPageName_MVCLayout" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="a0616a27-9b42-d56c-e59d-4d22510a02e0">
+      <Execution id="dd586856-8f65-4ed8-8fce-7c11cb6161ed" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLayoutPageName_MVCLayout" />
+    </UnitTest>
+    <UnitTest name="GetLayoutPageName_HardCodedLayout" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="29a9ac31-6a06-9c71-4972-30590bdf2a7b">
+      <Execution id="4c3f9377-05d8-4ef2-bd96-cb2883479bd6" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLayoutPageName_HardCodedLayout" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="29a9ac31-6a06-9c71-4972-30590bdf2a7b" executionId="4c3f9377-05d8-4ef2-bd96-cb2883479bd6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a0616a27-9b42-d56c-e59d-4d22510a02e0" executionId="dd586856-8f65-4ed8-8fce-7c11cb6161ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb3fd21d-5225-255d-e68c-aa7383253cbb" executionId="dcf9e824-c030-4fb0-be40-6861d1aca8e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd73caf9-f761-9833-4386-7cc9434f64d8" executionId="dff1c315-f5c3-47cc-a24c-c38dc1c07c74" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4c3f9377-05d8-4ef2-bd96-cb2883479bd6" testId="29a9ac31-6a06-9c71-4972-30590bdf2a7b" testName="GetLayoutPageName_HardCodedLayout" computerName="OMAR-PC" duration="00:00:00.0471117" startTime="2013-01-18T18:37:38.9730132+02:00" endTime="2013-01-18T18:37:39.3610354+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c3f9377-05d8-4ef2-bd96-cb2883479bd6">
+    </UnitTestResult>
+    <UnitTestResult executionId="dd586856-8f65-4ed8-8fce-7c11cb6161ed" testId="a0616a27-9b42-d56c-e59d-4d22510a02e0" testName="GetLayoutPageName_MVCLayout" computerName="OMAR-PC" duration="00:00:00.0009177" startTime="2013-01-18T18:37:39.3690358+02:00" endTime="2013-01-18T18:37:39.3800365+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd586856-8f65-4ed8-8fce-7c11cb6161ed">
+    </UnitTestResult>
+    <UnitTestResult executionId="dcf9e824-c030-4fb0-be40-6861d1aca8e7" testId="cb3fd21d-5225-255d-e68c-aa7383253cbb" testName="GetSectionsInLayoutTest" computerName="OMAR-PC" duration="00:00:00.0974040" startTime="2013-01-18T18:37:39.3820366+02:00" endTime="2013-01-18T18:37:39.4920429+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dcf9e824-c030-4fb0-be40-6861d1aca8e7">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;"Title"&gt;. Actual:&lt;Title&gt;. </Message>
+          <StackTrace>   at UnitTests.RegexServiceTest.GetSectionsInLayoutTest() in D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\RegexServiceTest.cs:line 25
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dff1c315-f5c3-47cc-a24c-c38dc1c07c74" testId="cd73caf9-f761-9833-4386-7cc9434f64d8" testName="GetSectionsInPageTest" computerName="OMAR-PC" duration="00:00:00.0013897" startTime="2013-01-18T18:37:39.4930429+02:00" endTime="2013-01-18T18:37:39.4980432+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dff1c315-f5c3-47cc-a24c-c38dc1c07c74">
+    </UnitTestResult>
+  </Results>
+</TestRun>

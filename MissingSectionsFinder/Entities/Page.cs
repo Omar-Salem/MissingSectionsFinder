@@ -8,5 +8,7 @@ namespace Entities
         public string Name { get; set; }
 
         public string Content { get; set; }
+
+        public string Area { get; set; }
     }
 }
