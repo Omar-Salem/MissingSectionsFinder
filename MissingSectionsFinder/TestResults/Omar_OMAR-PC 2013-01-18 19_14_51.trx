@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d736eb13-121d-4fac-a7e6-cee560c3d049" name="Omar@OMAR-PC 2013-01-18 19:14:51" runUser="Omar-PC\Omar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="IntegrationTests" id="85f80678-5acf-4267-a4f8-e5bf47bd5e87">
+    <Description>This test run configuration uses the VS IDE host type in the test run.</Description>
+    <Deployment userDeploymentRoot="D:\Git\MissingSectionsFinder\MissingSectionsFinder\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Omar_OMAR-PC 2013-01-18 19_14_51">
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Implementation.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\bin\Debug\Entities.dll" />
+    </Deployment>
+    <Execution>
+      <Hosts>
+        <VSSDKTestHostRunConfig name="VS IDE" HiveKind="DevEnv" HiveName="10.0Exp" xmlns="http://microsoft.com/schemas/VisualStudio/SDK/Tools/IdeHostAdapter/2006/06" />
+      </Hosts>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-18T19:14:51.5457090+02:00" queuing="2013-01-18T19:14:51.9777337+02:00" start="2013-01-18T19:14:52.0577383+02:00" finish="2013-01-18T19:14:52.7767794+02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetPartialPageNameTest" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="7a58ec07-c3e5-c405-fdda-29c99d1dedec">
+      <Execution id="aa74fd25-ff92-4de8-a953-b0222ef7aeba" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPartialPageNameTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="7a58ec07-c3e5-c405-fdda-29c99d1dedec" executionId="aa74fd25-ff92-4de8-a953-b0222ef7aeba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="aa74fd25-ff92-4de8-a953-b0222ef7aeba" testId="7a58ec07-c3e5-c405-fdda-29c99d1dedec" testName="GetPartialPageNameTest" computerName="OMAR-PC" duration="00:00:00.0811671" startTime="2013-01-18T19:14:52.1537438+02:00" endTime="2013-01-18T19:14:52.7257765+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa74fd25-ff92-4de8-a953-b0222ef7aeba">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;_Filters&gt;. Actual:&lt;(MVC.Reports.Shared.Views._Filters&gt;. </Message>
+          <StackTrace>   at UnitTests.RegexServiceTest.GetPartialPageNameTest() in D:\Git\MissingSectionsFinder\MissingSectionsFinder\UnitTests\RegexServiceTest.cs:line 88
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -260,6 +260,110 @@
     &lt;/fieldset&gt;
 }</value>
   </data>
+  <data name="PageWithPartialViews" xml:space="preserve">
+    <value>@model WebUI.Areas.Bots.Models.UsersMachinesSetting
+@{
+    Layout = "~/Areas/Bots/Views/Shared/_Main.cshtml";
+}
+&lt;script type="text/javascript" language="javascript"&gt;
+    $(document).ready(function () {
+        ToggleUsersDivs();
+        ToggleMachinesDivs();
+    });
+
+    function ToggleUsersDivs() {
+        if ($('#AllUsers').is(':checked')) {
+            $('#userName').attr('disabled', true);
+            $('#userName').val("");
+        } else {
+            $('#userName').removeAttr('disabled');
+        }
+    }
+
+
+    function ToggleMachinesDivs() {
+        if ($('#AllMachines').is(':checked')) {
+            $('#machineName').attr('disabled', true);
+            $('#machineName').val("");
+        } else {
+            $('#machineName').removeAttr('disabled');
+        }
+    }
+&lt;/script&gt;
+&lt;fieldset&gt;
+    &lt;legend&gt;Users &amp; Machines Setting&lt;/legend&gt;
+    @Html.ValidationSummary(false)
+    @using (Ajax.BeginForm(MVC.Bots.UsersAndMachines.AddUser(), new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "users" }))
+    {
+        &lt;div id="CertainUsersDiv"&gt;
+            User
+            &lt;input id="userName" name="userName" type="text" /&gt;
+            &lt;input type="submit" name="button" value='@WebUI.Resources.Add' /&gt;
+            &lt;div id="users"&gt;
+                @{Html.RenderPartial("_users", Model.SelectedUsers);}
+            &lt;/div&gt;
+        &lt;/div&gt;
+    }
+    @using (Ajax.BeginForm(MVC.Bots.UsersAndMachines.AddMachine(), new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "machines" }))
+    {
+        &lt;div id="CertainMachinesDiv"&gt;
+            Machine&lt;input id="machineName" name="machineName" type="text" /&gt;
+            &lt;input type="submit" name="button" value='@WebUI.Resources.Add' /&gt;
+            &lt;div id="machines"&gt;
+                @{Html.RenderPartial("_machines", Model.SelectedMachines);}
+            &lt;/div&gt;
+        &lt;/div&gt;
+    }
+    @using (Html.BeginForm(MVC.Bots.UsersAndMachines.Save()))
+    {
+        &lt;fieldset&gt;
+            &lt;span&gt;Everyone&lt;/span&gt;
+            @Html.RadioButtonFor(model =&gt; model.IsAllUsers, true, new { @id = "AllUsers", @onchange = "ToggleUsersDivs();" })&lt;br /&gt;
+            &lt;legend&gt;Users&lt;/legend&gt;Certain Users
+            @Html.RadioButtonFor(model =&gt; model.IsAllUsers, false, new { @onchange = "ToggleUsersDivs();" })&lt;br /&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+            &lt;span&gt;All Machines&lt;/span&gt;
+            @Html.RadioButtonFor(model =&gt; model.IsAllMachines, true, new { @id = "AllMachines", @onchange = "ToggleMachinesDivs();" })&lt;br /&gt;
+            &lt;legend&gt;Machines&lt;/legend&gt;&lt;span&gt;Certain Machines&lt;/span&gt;
+            @Html.RadioButtonFor(model =&gt; model.IsAllMachines, false, new { @onchange = "ToggleMachinesDivs();" })&lt;br /&gt;
+        &lt;/fieldset&gt;
+   
+        &lt;p&gt;
+            &lt;input type="submit" name="button" value='@WebUI.Resources.Next' /&gt;
+        &lt;/p&gt;
+    }
+&lt;/fieldset&gt;
+&lt;div&gt;
+    @Html.ActionLink(WebUI.Resources.Previous, MVC.Bots.Operations.Index())
+&lt;/div&gt;</value>
+  </data>
+  <data name="PageWithPartialViewT4MVC" xml:space="preserve">
+    <value>@model WebUI.Models.FilesModel
+@{
+    AjaxOptions ajaxOpts = new AjaxOptions
+{
+    UpdateTargetId = "DeletesGrid",
+    InsertionMode = InsertionMode.Replace,
+    LoadingElementId = "divLoading"
+};
+}
+@section Filters{
+    @using (Ajax.BeginForm(MVC.Reports.Reports.DeletesIndex(), ajaxOpts))
+    {
+        Html.RenderPartial(MVC.Reports.Shared.Views._Filters);
+    }
+}
+@section Title{@WebUI.Resources.DeletesTitle}
+@section PageName{@WebUI.Resources.DeletesTitle}
+
+            &lt;div id="divLoading" style="display: none; position: absolute; left: 50%; top: 50%; margin-left: -100px; margin-top: -100px" &gt;
+        &lt;img alt="" src="@Links.Content.images.loading_gif" /&gt;
+    &lt;/div&gt;
+    &lt;div id="DeletesGrid"&gt;
+        @{Html.RenderPartial(MVC.Reports.Reports.Views._DeletesGrid, Model);}
+    &lt;/div&gt;</value>
+  </data>
   <data name="PageWithSections" xml:space="preserve">
     <value>@model WebUI.Models.FilesModel
 @{

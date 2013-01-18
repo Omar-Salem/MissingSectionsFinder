@@ -12,6 +12,33 @@ namespace Services.Implementation
     {
         #region IRegexService
 
+        IEnumerable<string> IRegexService.GetPartialPageNames(string pageContent)
+        {
+            IList<string> pageNames = new List<string>();
+            var reg = new Regex(@"Html.RenderPartial\([^,\)]*");
+            var matches = reg.Matches(pageContent);
+
+            foreach (Match item in matches)
+            {
+                int startIdx = item.Value.IndexOf('(');
+                string partialView = item.Value.Substring(++startIdx, item.Value.Length - startIdx);
+                startIdx = partialView.LastIndexOf('.');
+
+                if (startIdx != -1)//In case of T4MVC templates:MVC.Reports.Shared.Views._Filters
+                {
+                    partialView = partialView.Substring(++startIdx, partialView.Length - startIdx);
+                }
+                else
+                {
+                    partialView = partialView.Replace("\"", string.Empty);
+                }
+
+                pageNames.Add(partialView);
+            }
+
+            return pageNames;
+        }
+
         IEnumerable<string> IRegexService.GetSectionsInLayout(string pageContent)
         {
             List<string> sections = new List<string>();

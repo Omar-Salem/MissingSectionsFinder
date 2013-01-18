@@ -32,10 +32,17 @@ namespace Services.Implementation.Implementation
 
         IEnumerable<Result> IPagesService.GetMissingSections(IEnumerable<Page> pages)
         {
+            pages = GetNonPartialPages(pages);
+
             var layoutSections = new Dictionary<string, IEnumerable<string>>();
 
             foreach (var currentPage in pages)
             {
+                if (currentPage.Name.Contains("_ViewStart"))
+                {
+                    continue;
+                }
+
                 Page layoutPage = GetLayoutPage(pages, currentPage);
 
                 if (layoutPage != null)
@@ -60,6 +67,43 @@ namespace Services.Implementation.Implementation
         #endregion
 
         #region Private Methods
+
+        private IEnumerable<Page> GetNonPartialPages(IEnumerable<Page> pages)
+        {
+            var allPartialPages = new HashSet<string>();
+
+            foreach (var page in pages)
+            {
+                IEnumerable<string> partialPage = _regexService.GetPartialPageNames(page.Content);
+
+                foreach (var item in partialPage)
+                {
+                    if (!allPartialPages.Contains(item))
+                    {
+                        allPartialPages.Add(item);
+                    }
+                }
+            }
+            foreach (var page in pages)
+            {
+                bool isNormalPage = true;
+
+                foreach (string partialPage in allPartialPages)
+                {
+                    if (page.Name.EndsWith(partialPage + ".cshtml") || page.Name.EndsWith(partialPage + ".vbhtml"))
+                    {
+                        isNormalPage = false;
+                        break;
+                    }
+                }
+
+                if (isNormalPage)
+                {
+                    yield return page;
+                }
+            }
+
+        }
 
         private Page GetLayoutPage(IEnumerable<Page> pages, Page currentPage)
         {
@@ -94,6 +138,7 @@ namespace Services.Implementation.Implementation
 
             if (layout == null)
             {
+                var xxxxx = pages.Where(p => string.IsNullOrEmpty(p.Area) && p.Name.Contains(layoutPageName)).ToArray();
                 layout = pages.Where(p => string.IsNullOrEmpty(p.Area) && p.Name.Contains(layoutPageName)).SingleOrDefault();
             }
 

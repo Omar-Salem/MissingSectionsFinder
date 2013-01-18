@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="fe53d209-dee4-4e4e-a7a6-097dc63f4148" name="Omar@OMAR-PC 2013-01-18 20:41:53" runUser="Omar-PC\Omar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="IntegrationTests" id="85f80678-5acf-4267-a4f8-e5bf47bd5e87">
+    <Description>This test run configuration uses the VS IDE host type in the test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Omar_OMAR-PC 2013-01-18 20_41_53">
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Implementation\bin\Debug\Services.Implementation.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Services.Contracts\bin\Debug\Services.Contracts.dll" />
+      <DeploymentItem filename="D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\bin\Debug\Entities.dll" />
+    </Deployment>
+    <Execution>
+      <Hosts>
+        <VSSDKTestHostRunConfig name="VS IDE" HiveKind="DevEnv" HiveName="10.0Exp" xmlns="http://microsoft.com/schemas/VisualStudio/SDK/Tools/IdeHostAdapter/2006/06" />
+      </Hosts>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-18T20:41:53.5883928+02:00" queuing="2013-01-18T20:41:53.6743977+02:00" start="2013-01-18T20:41:53.6863984+02:00" finish="2013-01-18T20:41:54.0414187+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetSectionsInLayoutTest" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="cb3fd21d-5225-255d-e68c-aa7383253cbb">
+      <Execution id="35bc099d-ed99-4c60-b54f-73767c5c3d87" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSectionsInLayoutTest" />
+    </UnitTest>
+    <UnitTest name="GetPartialPageNameT4MVCTest" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="ffe1ca80-43e1-3960-e956-2ce5d1a4a5f6">
+      <Execution id="725b78b3-58ce-4f58-8dd2-335732bd6221" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPartialPageNameT4MVCTest" />
+    </UnitTest>
+    <UnitTest name="GetPartialPageNameTest" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="7a58ec07-c3e5-c405-fdda-29c99d1dedec">
+      <Execution id="28325469-0c0b-4fe5-b888-6dc22fe80893" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPartialPageNameTest" />
+    </UnitTest>
+    <UnitTest name="GetLayoutPageName_HardCodedLayout" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="29a9ac31-6a06-9c71-4972-30590bdf2a7b">
+      <Execution id="f1653b1a-c9ce-4d4f-af25-3609e172b7b8" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLayoutPageName_HardCodedLayout" />
+    </UnitTest>
+    <UnitTest name="GetLayoutPageName_MVCLayout" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="a0616a27-9b42-d56c-e59d-4d22510a02e0">
+      <Execution id="2e2a3f21-1c9b-4f43-8c8e-7b581d9ff8cd" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLayoutPageName_MVCLayout" />
+    </UnitTest>
+    <UnitTest name="GetSectionsInPageTest" storage="d:\git\missingsectionsfinder\missingsectionsfinder\unittests\bin\debug\unittests.dll" id="cd73caf9-f761-9833-4386-7cc9434f64d8">
+      <Execution id="de0e9a41-7924-4dc7-a699-c6fa75820c24" />
+      <TestMethod codeBase="D:/Git/MissingSectionsFinder/MissingSectionsFinder/UnitTests/bin/Debug/UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTests.RegexServiceTest, UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetSectionsInPageTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="29a9ac31-6a06-9c71-4972-30590bdf2a7b" executionId="f1653b1a-c9ce-4d4f-af25-3609e172b7b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7a58ec07-c3e5-c405-fdda-29c99d1dedec" executionId="28325469-0c0b-4fe5-b888-6dc22fe80893" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a0616a27-9b42-d56c-e59d-4d22510a02e0" executionId="2e2a3f21-1c9b-4f43-8c8e-7b581d9ff8cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb3fd21d-5225-255d-e68c-aa7383253cbb" executionId="35bc099d-ed99-4c60-b54f-73767c5c3d87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd73caf9-f761-9833-4386-7cc9434f64d8" executionId="de0e9a41-7924-4dc7-a699-c6fa75820c24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffe1ca80-43e1-3960-e956-2ce5d1a4a5f6" executionId="725b78b3-58ce-4f58-8dd2-335732bd6221" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f1653b1a-c9ce-4d4f-af25-3609e172b7b8" testId="29a9ac31-6a06-9c71-4972-30590bdf2a7b" testName="GetLayoutPageName_HardCodedLayout" computerName="OMAR-PC" duration="00:00:00.0363609" startTime="2013-01-18T20:41:53.6933988+02:00" endTime="2013-01-18T20:41:53.9784151+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1653b1a-c9ce-4d4f-af25-3609e172b7b8">
+    </UnitTestResult>
+    <UnitTestResult executionId="28325469-0c0b-4fe5-b888-6dc22fe80893" testId="7a58ec07-c3e5-c405-fdda-29c99d1dedec" testName="GetPartialPageNameTest" computerName="OMAR-PC" duration="00:00:00.0015998" startTime="2013-01-18T20:41:53.9814153+02:00" endTime="2013-01-18T20:41:53.9864156+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28325469-0c0b-4fe5-b888-6dc22fe80893">
+    </UnitTestResult>
+    <UnitTestResult executionId="2e2a3f21-1c9b-4f43-8c8e-7b581d9ff8cd" testId="a0616a27-9b42-d56c-e59d-4d22510a02e0" testName="GetLayoutPageName_MVCLayout" computerName="OMAR-PC" duration="00:00:00.0007252" startTime="2013-01-18T20:41:53.9894157+02:00" endTime="2013-01-18T20:41:53.9934160+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e2a3f21-1c9b-4f43-8c8e-7b581d9ff8cd">
+    </UnitTestResult>
+    <UnitTestResult executionId="35bc099d-ed99-4c60-b54f-73767c5c3d87" testId="cb3fd21d-5225-255d-e68c-aa7383253cbb" testName="GetSectionsInLayoutTest" computerName="OMAR-PC" duration="00:00:00.0033999" startTime="2013-01-18T20:41:53.9964161+02:00" endTime="2013-01-18T20:41:54.0034165+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35bc099d-ed99-4c60-b54f-73767c5c3d87">
+    </UnitTestResult>
+    <UnitTestResult executionId="de0e9a41-7924-4dc7-a699-c6fa75820c24" testId="cd73caf9-f761-9833-4386-7cc9434f64d8" testName="GetSectionsInPageTest" computerName="OMAR-PC" duration="00:00:00.0012749" startTime="2013-01-18T20:41:54.0054166+02:00" endTime="2013-01-18T20:41:54.0114170+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de0e9a41-7924-4dc7-a699-c6fa75820c24">
+    </UnitTestResult>
+    <UnitTestResult executionId="725b78b3-58ce-4f58-8dd2-335732bd6221" testId="ffe1ca80-43e1-3960-e956-2ce5d1a4a5f6" testName="GetPartialPageNameT4MVCTest" computerName="OMAR-PC" duration="00:00:00.0011818" startTime="2013-01-18T20:41:54.0134171+02:00" endTime="2013-01-18T20:41:54.0194174+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="725b78b3-58ce-4f58-8dd2-335732bd6221">
+    </UnitTestResult>
+  </Results>
+</TestRun>

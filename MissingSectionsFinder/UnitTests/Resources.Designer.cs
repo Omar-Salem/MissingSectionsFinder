@@ -129,6 +129,57 @@ namespace UnitTests {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to @model WebUI.Areas.Bots.Models.UsersMachinesSetting
+        ///@{
+        ///    Layout = &quot;~/Areas/Bots/Views/Shared/_Main.cshtml&quot;;
+        ///}
+        ///&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+        ///    $(document).ready(function () {
+        ///        ToggleUsersDivs();
+        ///        ToggleMachinesDivs();
+        ///    });
+        ///
+        ///    function ToggleUsersDivs() {
+        ///        if ($(&apos;#AllUsers&apos;).is(&apos;:checked&apos;)) {
+        ///            $(&apos;#userName&apos;).attr(&apos;disabled&apos;, true);
+        ///            $(&apos;#userName&apos;).val(&quot;&quot;);
+        ///        } else {
+        ///            $(&apos;#userName&apos;).removeAttr(&apos;disabled [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string PageWithPartialViews {
+            get {
+                return ResourceManager.GetString("PageWithPartialViews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @model WebUI.Models.FilesModel
+        ///@{
+        ///    AjaxOptions ajaxOpts = new AjaxOptions
+        ///{
+        ///    UpdateTargetId = &quot;DeletesGrid&quot;,
+        ///    InsertionMode = InsertionMode.Replace,
+        ///    LoadingElementId = &quot;divLoading&quot;
+        ///};
+        ///}
+        ///@section Filters{
+        ///    @using (Ajax.BeginForm(MVC.Reports.Reports.DeletesIndex(), ajaxOpts))
+        ///    {
+        ///        Html.RenderPartial(MVC.Reports.Shared.Views._Filters);
+        ///    }
+        ///}
+        ///@section Title{@WebUI.Resources.DeletesTitle}
+        ///@section PageName{@WebUI.Resources.DeletesTitle}
+        ///
+        ///            &lt;div id=&quot;divLoadin [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string PageWithPartialViewT4MVC {
+            get {
+                return ResourceManager.GetString("PageWithPartialViewT4MVC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to @model WebUI.Models.FilesModel
         ///@{
         ///    AjaxOptions ajaxOpts = new AjaxOptions

@@ -72,5 +72,37 @@ namespace UnitTests
             Assert.AreEqual("Title", actual.ElementAt(1));
             Assert.AreEqual("PageName", actual.ElementAt(2));
         }
+
+        [TestMethod()]
+        public void GetPartialPageNameT4MVCTest()
+        {
+            //Arrange
+            IRegexService target = new RegexService();
+            string pageContent = Resources.PageWithPartialViewT4MVC;
+
+            //Act
+            IEnumerable<string> actual = target.GetPartialPageNames(pageContent);
+
+            //Assert
+            Assert.AreEqual(2, actual.Count());
+            Assert.AreEqual("_Filters", actual.ElementAt(0));
+            Assert.AreEqual("_DeletesGrid", actual.ElementAt(1));
+        }
+
+        [TestMethod()]
+        public void GetPartialPageNameTest()
+        {
+            //Arrange
+            IRegexService target = new RegexService();
+            string pageContent = Resources.PageWithPartialViews;
+
+            //Act
+            IEnumerable<string> actual = target.GetPartialPageNames(pageContent);
+
+            //Assert
+            Assert.AreEqual(2, actual.Count());
+            Assert.AreEqual("_users", actual.ElementAt(0));
+            Assert.AreEqual("_machines", actual.ElementAt(1));
+        }
     }
 }
