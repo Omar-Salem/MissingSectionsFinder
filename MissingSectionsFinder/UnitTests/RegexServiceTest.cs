@@ -81,7 +81,7 @@ namespace UnitTests
             string pageContent = Resources.PageWithPartialViewT4MVC;
 
             //Act
-            IEnumerable<string> actual = target.GetPartialPageNames(pageContent);
+            IEnumerable<string> actual = target.GetChildViews(pageContent);
 
             //Assert
             Assert.AreEqual(2, actual.Count());
@@ -97,7 +97,7 @@ namespace UnitTests
             string pageContent = Resources.PageWithPartialViews;
 
             //Act
-            IEnumerable<string> actual = target.GetPartialPageNames(pageContent);
+            IEnumerable<string> actual = target.GetChildViews(pageContent);
 
             //Assert
             Assert.AreEqual(2, actual.Count());

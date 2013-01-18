@@ -74,7 +74,7 @@ namespace Services.Implementation.Implementation
 
             foreach (var page in pages)
             {
-                IEnumerable<string> partialPage = _regexService.GetPartialPageNames(page.Content);
+                IEnumerable<string> partialPage = _regexService.GetChildViews(page.Content);
 
                 foreach (var item in partialPage)
                 {

@@ -6,7 +6,7 @@ namespace Services.Contracts
     {
         IEnumerable<string> GetSectionsInLayout(string pageContent);
         string GetLayoutPageName(string pageContent);
-        IEnumerable<string> GetPartialPageNames(string pageContent);
+        IEnumerable<string> GetChildViews(string pageContent);
         IEnumerable<string> GetSectionsInPage(string pageContent);
     }
 }

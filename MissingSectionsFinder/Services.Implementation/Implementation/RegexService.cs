@@ -12,31 +12,14 @@ namespace Services.Implementation
     {
         #region IRegexService
 
-        IEnumerable<string> IRegexService.GetPartialPageNames(string pageContent)
+        IEnumerable<string> IRegexService.GetChildViews(string pageContent)
         {
-            IList<string> pageNames = new List<string>();
-            var reg = new Regex(@"Html.RenderPartial\([^,\)]*");
-            var matches = reg.Matches(pageContent);
+            List<string> partialViews = GetChildViews(pageContent, @"Html.RenderPartial\([^,\)]*");
+            List<string> partialActions = GetChildViews(pageContent, @"Html.RenderAction\([^,\)]*");
 
-            foreach (Match item in matches)
-            {
-                int startIdx = item.Value.IndexOf('(');
-                string partialView = item.Value.Substring(++startIdx, item.Value.Length - startIdx);
-                startIdx = partialView.LastIndexOf('.');
+            partialViews.AddRange(partialActions);
 
-                if (startIdx != -1)//In case of T4MVC templates:MVC.Reports.Shared.Views._Filters
-                {
-                    partialView = partialView.Substring(++startIdx, partialView.Length - startIdx);
-                }
-                else
-                {
-                    partialView = partialView.Replace("\"", string.Empty);
-                }
-
-                pageNames.Add(partialView);
-            }
-
-            return pageNames;
+            return partialViews;
         }
 
         IEnumerable<string> IRegexService.GetSectionsInLayout(string pageContent)
@@ -87,6 +70,33 @@ namespace Services.Implementation
         #endregion IRegexService
 
         #region Private Methods
+
+        private List<string> GetChildViews(string pageContent, string pattern)
+        {
+            List<string> pageNames = new List<string>();
+            var reg = new Regex(pattern);
+            var matches = reg.Matches(pageContent);
+
+            foreach (Match item in matches)
+            {
+                int startIdx = item.Value.IndexOf('(');
+                string partialView = item.Value.Substring(++startIdx, item.Value.Length - startIdx);
+                startIdx = partialView.LastIndexOf('.');
+
+                if (startIdx != -1)//In case of T4MVC templates:MVC.Reports.Shared.Views._Filters
+                {
+                    partialView = partialView.Substring(++startIdx, partialView.Length - startIdx);
+                }
+                else
+                {
+                    partialView = partialView.Replace("\"", string.Empty);
+                }
+
+                pageNames.Add(partialView);
+            }
+
+            return pageNames;
+        }
 
         private IEnumerable<string> FindSections(string pageContent, string reg)
         {

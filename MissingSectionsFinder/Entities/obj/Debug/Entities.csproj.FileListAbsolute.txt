@@ -7,3 +7,4 @@ D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\bin\Debug\Entities.d
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\bin\Debug\Entities.pdb
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\obj\Debug\Entities.dll
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\obj\Debug\Entities.pdb
+D:\Git\MissingSectionsFinder\MissingSectionsFinder\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
