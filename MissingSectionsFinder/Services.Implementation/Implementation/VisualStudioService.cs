@@ -49,13 +49,33 @@
             return null;
         }
 
-        IList<Page> IVisualStudioService.GetPages(ProjectItems projectItems)
+        IEnumerable<Area> IVisualStudioService.GetAreas(ProjectItems projectItems)
+        {
+            foreach (ProjectItem folder in projectItems)
+            {
+                if (folder.Name == "Areas")
+                {
+                    foreach (ProjectItem area in folder.ProjectItems)
+                    {
+                        yield return new Area { Name = area.Name, Pages = GetPages(area) };
+                    }
+
+                   yield break;
+                }
+            }
+        }
+
+        IEnumerable<Page> IVisualStudioService.GetPages(ProjectItems projectItems)
         {
             List<Page> pages = new List<Page>();
 
-            foreach (ProjectItem item in projectItems)
+            foreach (ProjectItem folder in projectItems)
             {
-                pages.AddRange(GetPages(item));
+                if (folder.Name == "Views")
+                {
+                    pages.AddRange(GetPages(folder));
+                    break;
+                }
             }
 
             return pages;
@@ -140,23 +160,16 @@
 
             if (item.ProjectItems.Count == 0)
             {
-                if (CheckIsPage(item))//maybe its an empty folder?
+                if (CheckIsPage(item))//check its not an empty folder
                 {
                     GetPageData(item, files);
                 }
             }
             else
             {
-                if (CheckIsPage(item))//aspx page ?
+                foreach (ProjectItem currentItem in item.ProjectItems)
                 {
-                    GetPageData(item, files);
-                }
-                else
-                {
-                    foreach (ProjectItem currentItem in item.ProjectItems)
-                    {
-                        files.AddRange(GetPages(currentItem));
-                    }
+                    files.AddRange(GetPages(currentItem));
                 }
             }
 
@@ -166,12 +179,12 @@
         private void GetPageData(ProjectItem item, List<Page> files)
         {
             var fileContents = GetDocumentText(item);
-            files.Add(new Page { Name = FormatPath(item), Content = fileContents, Item = item });
+            files.Add(new Page { Name = FormatPath(item), Content = fileContents});
         }
 
         private bool CheckIsPage(ProjectItem item)
         {
-            return item.Name.EndsWith(".aspx") || item.Name.EndsWith(".ascx") || item.Name.EndsWith(".Master") || item.Name.EndsWith(".cshtml") || item.Name.EndsWith(".vbhtml");
+            return item.Name.EndsWith(".cshtml") || item.Name.EndsWith(".vbhtml");
         }
 
         private string GetDocumentText(ProjectItem page)

@@ -78,8 +78,11 @@
                 return;
             }
 
-            var pages = _visualStudioService.GetPages(webProject.Project.ProjectItems);
-            Results = new ObservableCollection<Result>(_pagesService.GetMissingSections(pages));
+            IEnumerable<Page> pages = _visualStudioService.GetPages(webProject.Project.ProjectItems);
+            IEnumerable<Area> areas = _visualStudioService.GetAreas(webProject.Project.ProjectItems);
+            IEnumerable<Result> results = _pagesService.GetMissingSections(areas, pages);
+
+            Results = new ObservableCollection<Result>(results);
         }
 
         #endregion Commands Methods

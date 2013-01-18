@@ -13,24 +13,41 @@ namespace Services.Implementation.Implementation
     public class PagesService : IPagesService
     {
         #region Member Variables
-        
-        readonly IRegexService _regexService; 
+
+        readonly IRegexService _regexService;
 
         #endregion
 
         #region Constructor
-        
+
         [ImportingConstructor]
         public PagesService([Import("regexService", typeof(IRegexService))]IRegexService regexService)
         {
             _regexService = regexService;
-        } 
+        }
 
         #endregion
 
         #region Public Methods
-        
-        IEnumerable<Result> IPagesService.GetMissingSections(IEnumerable<Page> pages)
+
+        IEnumerable<Result> IPagesService.GetMissingSections(IEnumerable<Area> areas, IEnumerable<Page> pages)
+        {
+            IEnumerable<Result> results = GetMissingSectionsInPages(pages);
+
+            foreach (Area area in areas)
+            {
+                IEnumerable<Result> missingSections = GetMissingSectionsInPages(area.Pages);
+                results = results.Concat(missingSections);
+            }
+
+            return results;
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        IEnumerable<Result> GetMissingSectionsInPages(IEnumerable<Page> pages)
         {
             Page defaultLayoutPage = GetDefaultLayoutPage(pages);
 
@@ -42,11 +59,7 @@ namespace Services.Implementation.Implementation
 
                 yield return new Result { PageName = page.Name, Sections = missingSections };
             }
-        } 
-
-        #endregion
-
-        #region Private Methods
+        }
 
         private Page GetDefaultLayoutPage(IEnumerable<Page> pages)
         {
@@ -54,7 +67,7 @@ namespace Services.Implementation.Implementation
 
             if (viewStart == null)
             {
-                return new Page { };
+                return new Page { Name = "", Content = "" };
             }
 
             string defaultLayoutPageName = _regexService.GetLayoutPageName(viewStart.Content);
@@ -63,7 +76,7 @@ namespace Services.Implementation.Implementation
 
             if (defaultLayoutPage == null)
             {
-                return new Page { };
+                return new Page { Name = "", Content = "" };
             }
 
             return defaultLayoutPage;
@@ -92,17 +105,17 @@ namespace Services.Implementation.Implementation
             IEnumerable<string> pageSections = _regexService.GetSectionsInPage(page.Content);
             IEnumerable<string> missingSections = new string[] { };
 
-            if (string.IsNullOrEmpty(pageLayout))
+            if (string.IsNullOrEmpty(pageLayout) && pagesWithSections.ContainsKey(defaultLayoutPage.Name))
             {
                 missingSections = pagesWithSections[defaultLayoutPage.Name].Except(pageSections);
             }
-            else if (pageLayout != "null")
+            else if (pagesWithSections.ContainsKey(pageLayout))
             {
                 missingSections = pagesWithSections[pageLayout].Except(pageSections);
             }
 
             return missingSections;
-        } 
+        }
 
         #endregion
     }

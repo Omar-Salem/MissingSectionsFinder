@@ -44,13 +44,17 @@ namespace Services.Implementation
 
         IEnumerable<string> IRegexService.GetSectionsInPage(string pageContent)
         {
+            List<string> sections = new List<string>();
+
             var reg = new Regex(@"@section[^{]*");
             var matches = reg.Matches(pageContent);
 
             foreach (Match item in matches)
             {
-                yield return item.Value.Replace(@"@section", string.Empty).Replace(" ", string.Empty);
+                sections.Add(item.Value.Replace(@"@section", string.Empty).Replace(" ", string.Empty));
             }
+
+            return sections;
         }
 
         #endregion IRegexService

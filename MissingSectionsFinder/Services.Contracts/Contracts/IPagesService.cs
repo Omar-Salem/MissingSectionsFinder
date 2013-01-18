@@ -6,6 +6,6 @@
 
     public interface IPagesService
     {
-        IEnumerable<Result> GetMissingSections(IEnumerable<Page> pages);
+        IEnumerable<Result> GetMissingSections(IEnumerable<Area> areas, IEnumerable<Page> pages);
     }
 }

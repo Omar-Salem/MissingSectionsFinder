@@ -7,10 +7,10 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel Orientation="Vertical">
         <Button Content="Find" Height="23" Name="button1" Width="75" Command="{Binding FindMissingSections}" />
-        <ListBox Height="100" Name="listBox1" Width="120" ItemsSource="{Binding Results}" DisplayMemberPath="PageName" SelectedItem="{Binding SelectedPage}" >
+        <ListBox Height="100" Name="listBox1" Width="auto" ItemsSource="{Binding Results}" DisplayMemberPath="PageName" SelectedItem="{Binding SelectedPage}" >
 
         </ListBox>
-        <ListBox Height="100" Name="listBox2" Width="120" ItemsSource="{Binding SelectedPage.Sections}" />
+        <ListBox Height="100" Name="listBox2" Width="auto" ItemsSource="{Binding SelectedPage.Sections}" />
 
     </StackPanel>
 </UserControl>

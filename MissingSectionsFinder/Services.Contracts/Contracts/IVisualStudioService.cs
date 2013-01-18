@@ -7,7 +7,7 @@
     public interface IVisualStudioService
     {
         WebProject GetWebProject();
-
-        IList<Page> GetPages(ProjectItems item);
+        IEnumerable<Area> GetAreas(ProjectItems item);
+        IEnumerable<Page> GetPages(ProjectItems item);
     }
 }

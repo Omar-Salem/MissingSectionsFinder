@@ -66,5 +66,3 @@ D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.pkgdef
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\MissingSectionsFinder.Package.latest.pkgdef
 D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\extension.vsixmanifest
-D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\VSCT.read.1.tlog
-D:\Git\MissingSectionsFinder\MissingSectionsFinder\MissingSectionsFinder.Package\obj\Debug\VSCT.write.1.tlog
